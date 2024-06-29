@@ -1513,15 +1513,14 @@ footer .credits a {
     transform: translateX(5px);
   }
 
-  @media (max-width: 991px) {
-    .navbar ul {
-      display: none; /* Hide the menu by default */
-      /* Add other styling properties as needed */
-    }
-  
-    .navbar.navbar-mobile-show ul {
-      display: block; /* Show the menu when .navbar-mobile-show is added */
-      /* Adjust other styling properties as needed */
-    }
+@media (max-width: 991px) {
+  .navbar ul {
+    display: none; /* Hide the menu by default */
+    /* Add other styling properties as needed */
   }
-  
+
+  .navbar.navbar-mobile-show ul {
+    display: block; /* Show the menu when .navbar-mobile-show is added */
+    /* Adjust other styling properties as needed */
+  }
+}
