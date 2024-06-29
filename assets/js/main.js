@@ -479,5 +479,23 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
-
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navbar = document.querySelector('#navbar');
+  
+    if (mobileNavToggle && navbar) {
+      mobileNavToggle.addEventListener('click', function() {
+        navbar.classList.toggle('navbar-mobile-show');
+      });
+  
+      // Optionally, close the mobile menu when a nav link is clicked
+      const navLinks = navbar.querySelectorAll('ul li a.nav-link');
+      navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+          navbar.classList.remove('navbar-mobile-show');
+        });
+      });
+    }
+  });
+  
 })()
